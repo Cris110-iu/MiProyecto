@@ -1,0 +1,32 @@
+/* Paleta de colores y tipografia */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #c7b1cc;
+    color: #333;
+  }
+  
+  /* Estilos generales */
+  h1, h2 {
+    font-weight: bold;
+  }
+  
+  /* Galeria */
+  .galeria-img {
+    border-radius: 15px;
+    transition: transform 0.3s;
+  }
+  
+  
+  /* Formulario */
+  .contacto-form {
+    background-color: #27b35c;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #133e69;
+    color: rgb(205, 95, 95);
+  }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="galeria.css">
+    <title>Galeria con Filtros</title>
+    
+</head>
+<body>
+
+    <h1>Galeria</h1>
+
+    <div class="filtros">
+        <button onclick="filtrar('todos')">Todos</button>
+        <button onclick="filtrar('naturaleza')">Naturaleza</button>
+        <button onclick="filtrar('urbano')">Urbano</button>
+    </div>
+
+    <div class="galeria">
+        <div class="imagen naturaleza">
+            <img src="../assets/imagen1.jpg" alt="Naturaleza">
+            <p class="descripcion">La imagen muestra un paisaje natural de ensueño, donde un río cristalino serpentea entre verdes praderas y altos árboles que se mecen suavemente con la brisa. Al fondo, se elevan majestuosas montañas cubiertas de nieve, reflejando la luz del sol que comienza a asomarse por el horizonte. El cielo, teñido de tonos anaranjados y rosados, anuncia el amanecer, mientras algunas aves vuelan en formación, cruzando el aire fresco de la mañana. La escena transmite paz, pureza y una conexion profunda con la naturaleza.</p>
+        </div>
+        <div class="imagen naturaleza">
+            <img src="../assets/imagen6.jpg" alt="Naturaleza">
+            <p class="descripcion">La imagen retrata un hermoso campo verde que se extiende hasta donde alcanza la vista, con una textura suave y cuidada por el paso del viento. A lo largo del paisaje, se alzan majestuosos árboles de copa frondosa, cuyas hojas bailan con la brisa suave de la tarde. Algunos están agrupados formando pequeños bosquecillos, mientras que otros se levantan solitarios, proyectando sombras alargadas sobre la hierba. La luz del sol se filtra entre las ramas, creando destellos dorados que iluminan el paisaje con calidez. Todo transmite una sensación de tranquilidad, armonía con la naturaleza y belleza pura.</p>
+        </div>
+        <div class="imagen naturaleza">
+            <img src="../assets/imagen4.jpg" alt="Naturaleza">
+            <p class="descripcion">La imagen muestra un extenso campo rural bañado por la luz dorada del atardecer. En primer plano, se observan pastizales verdes y ondulados, salpicados por flores silvestres de colores vivos. Un camino de tierra serpentea entre los cultivos, guiando la vista hacia una pequeña casa de campo con techo de tejas rojas y paredes blancas. A su alrededor, algunos árboles altos proporcionan sombra, y se divisan animales de granja como vacas y gallinas. En el horizonte, suaves colinas se recortan contra un cielo azul con nubes esponjosas, transmitiendo una sensación de paz y serenidad.</p>
+        </div>
+
+        <div class="imagen urbano">
+            <img src="../assets/imagen2.jpg" alt="Ciudad">
+            <p class="descripcion">La imagen retrata una ciudad moderna en plena actividad. Altos rascacielos de cristal reflejan la luz del sol, mientras que las calles están llenas de autos, bicicletas y personas que se mueven con prisa. Las luces de los semáforos, los letreros luminosos y las vitrinas de las tiendas añaden color y energía a la escena. En las aceras, la gente camina, conversa, toma café o espera el transporte público. Al fondo, se ve el horizonte urbano recortado contra un cielo parcialmente nublado, con una mezcla de arquitectura antigua y moderna que refleja la historia y el dinamismo de la ciudad. El ambiente es vibrante, lleno de vida y movimiento constante.</p>
+        </div>
+        <div class="imagen urbano">
+            <img src="../assets/imagen5.jpg" alt="Ciudad">
+            <p class="descripcion">La imagen presenta un moderno parque urbano que combina naturaleza y arquitectura innovadora. En el centro del paisaje destaca un impresionante puente tridimensional con un diseño futurista, formado por curvas elegantes y estructuras metálicas que se entrelazan en diferentes niveles. El puente conecta varios puntos del parque y permite a los visitantes caminar por senderos elevados, ofreciendo vistas panorámicas de jardines, árboles frondosos y estanques brillantes. A su alrededor, hay zonas de descanso, senderos para bicicletas y áreas de juegos infantiles. El contraste entre el diseño vanguardista del puente y la vegetación natural crea una atmósfera vibrante y armónica, reflejando el equilibrio entre tecnología y medio ambiente en pleno corazón de la ciudad.</p>
+        </div>
+        <div class="imagen urbano">
+            <img src="../assets/imagen3.jpg" alt="Ciudad">
+            <p class="descripcion">La imagen muestra un parque urbano en el corazón de la ciudad, rodeado de altos edificios modernos que contrastan con la naturaleza del lugar. Los caminos pavimentados serpentean entre áreas verdes bien cuidadas, donde hay árboles altos, arbustos podados y coloridos parterres de flores. Bancas de madera están distribuidas a lo largo del recorrido, muchas ocupadas por personas leyendo, conversando o simplemente disfrutando del ambiente. En el centro del parque, una fuente con chorros de agua crea un sonido relajante, y cerca de ella, niños juegan en una zona con columpios y toboganes. El parque está lleno de vida, con ciclistas, corredores y familias paseando, ofreciendo un respiro verde dentro del bullicio urbano.</p>
+        </div>
+    </div>
+
+    <script>
+        function filtrar(categoria) {
+            const imagenes = document.querySelectorAll('.imagen');
+
+            imagenes.forEach(img => {
+                if (categoria === 'todos') {
+                    img.classList.remove('oculto');
+                } else {
+                    img.classList.toggle('oculto', !img.classList.contains(categoria));
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
